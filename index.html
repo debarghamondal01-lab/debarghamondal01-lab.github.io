@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Debargha Mondal — AI/ML Engineer Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <div class="floating-orb orb-1"></div>
+    <div class="floating-orb orb-2"></div>
+    <div class="floating-orb orb-3"></div>
+
+    <!-- ============ NAVIGATION ============ -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#home" class="nav-logo">DM</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button id="themeToggle" class="theme-toggle" aria-label="Toggle theme">
+                <span class="theme-icon">☀️</span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- ============ HERO SECTION ============ -->
+    <section id="home" class="hero">
+        <div class="hero-content">
+            <div class="hero-badge">
+                <span class="pulse-dot"></span>
+                Available for Internships
+            </div>
+            <h1 class="hero-title">
+                Hi, I'm <span class="gradient-text">Debargha Mondal</span>
+            </h1>
+            <h2 class="hero-subtitle">
+                B.Tech CSE Student | Building AI/ML Systems
+            </h2>
+            <p class="hero-description">
+                I'm a 2nd-year B.Tech student passionate about Artificial Intelligence and Machine Learning. 
+                Despite having limited hardware, I've trained a CNN to 99.12% accuracy, deployed a full-stack 
+                game, and built multiple AI-powered applications.
+            </p>
+            <div class="hero-buttons">
+                <a href="#projects" class="btn primary">View My Projects →</a>
+                <a href="#contact" class="btn secondary">Get In Touch</a>
+            </div>
+            <div class="hero-stats">
+                <div class="stat-item">
+                    <div class="stat-number">6+</div>
+                    <div class="stat-label">Projects Built</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">99.12%</div>
+                    <div class="stat-label">CNN Accuracy</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">2</div>
+                    <div class="stat-label">Live Deployments</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ ABOUT SECTION ============ -->
+    <section id="about" class="section">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+
+            <div class="about-content">
+                <div class="about-photo-wrapper">
+                    <div class="about-photo-ring"></div>
+                    <img src="profile.jpg" alt="Debargha Mondal" class="about-photo">
+                </div>
+
+                <div class="about-text">
+                    <p>
+                        I'm a B.Tech Computer Science student at <strong>Narula Institute of Technology</strong>, 
+                        Kolkata. My journey in tech started with a curiosity about how machines can learn 
+                        from data — and it quickly turned into a passion for building intelligent systems.
+                    </p>
+                    <p>
+                        What makes me different? I don't wait for perfect hardware. On a 6-year-old laptop 
+                        with 8GB RAM, I've trained neural networks on Google Colab, deployed full-stack 
+                        applications, and built complete ML pipelines from scratch.
+                    </p>
+                    <p>
+                        I'm currently looking for <strong>internships in AI/ML, Data Science, or Full-Stack 
+                        Development</strong> where I can apply my skills to solve real-world problems.
+                    </p>
+                    <p>
+                        My key strengths are Python, TensorFlow, FastAPI, and a willingness to learn 
+                        anything. I enjoy working on problems that require both algorithmic thinking 
+                        and practical engineering — from training CNNs to deploying REST APIs.
+                    </p>
+                </div>
+            </div>
+
+            <div class="about-facts">
+                <div class="fact-card">
+                    <div class="fact-icon">🎓</div>
+                    <div class="fact-info">
+                        <div class="fact-label">Education</div>
+                        <div class="fact-value">B.Tech CSE, 2025–2029</div>
+                    </div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">📍</div>
+                    <div class="fact-info">
+                        <div class="fact-label">Location</div>
+                        <div class="fact-value">Kolkata, West Bengal</div>
+                    </div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">💼</div>
+                    <div class="fact-info">
+                        <div class="fact-label">Looking For</div>
+                        <div class="fact-value">AI/ML Internships</div>
+                    </div>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-icon">⚡</div>
+                    <div class="fact-info">
+                        <div class="fact-label">Focus Areas</div>
+                        <div class="fact-value">CNN, NLP, LLMs, APIs</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ PROJECTS SECTION ============ -->
+    <section id="projects" class="section">
+        <div class="container">
+            <h2 class="section-title">Featured Projects</h2>
+            <p class="section-subtitle">Six projects built from scratch, deployed where possible.</p>
+
+            <div class="projects-grid">
+
+                <div class="project-card featured">
+                    <div class="project-badge">🏆 Featured</div>
+                    <div class="project-header">
+                        <div class="project-icon">🔢</div>
+                        <div>
+                            <h3 class="project-title">Digit Vision</h3>
+                            <p class="project-category">Deep Learning · Computer Vision</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A CNN-based handwritten digit recognition app. Users draw on a canvas; the model predicts the digit in real-time with 99.12% accuracy.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">TensorFlow</span>
+                        <span class="tech-tag">Keras</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">NumPy</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/debarghamondal01-lab/digit-vision" target="_blank" class="project-link">
+                            📁 View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card featured">
+                    <div class="project-badge">🚀 Live</div>
+                    <div class="project-header">
+                        <div class="project-icon">🏙️</div>
+                        <div>
+                            <h3 class="project-title">Skyscrapers CSP Game</h3>
+                            <p class="project-category">Algorithms · Full-Stack</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A full-stack puzzle game modeled as a Constraint Satisfaction Problem. Implements Backtracking, Forward Checking, MRV, Degree Heuristic, LCV, and AC-3.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">JavaScript</span>
+                        <span class="tech-tag">CSP</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://skyscrapers-csp.onrender.com" target="_blank" class="project-link primary">
+                            🌐 Live Demo
+                        </a>
+                        <a href="https://github.com/debarghamondal01-lab/skyscrapers-csp" target="_blank" class="project-link">
+                            📁 View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🤖</div>
+                        <div>
+                            <h3 class="project-title">AI Resume Analyzer</h3>
+                            <p class="project-category">Generative AI · LLMs</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        An AI tool that compares a resume against a job description using Google Gemini. Provides a match score, missing skills, and actionable feedback.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Gemini API</span>
+                        <span class="tech-tag">LLM</span>
+                        <span class="tech-tag">Prompt Eng.</span>
+                        <span class="tech-tag">Python</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/debarghamondal01-lab/ai-resume-analyzer" target="_blank" class="project-link">
+                            📁 View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">🕵️</div>
+                        <div>
+                            <h3 class="project-title">Fake Job Detector API</h3>
+                            <p class="project-category">NLP · ML Deployment</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        An NLP model that detects fraudulent job postings. Trained on 18,000+ samples with TF-IDF and Logistic Regression, deployed as a REST API.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Scikit-learn</span>
+                        <span class="tech-tag">NLP</span>
+                        <span class="tech-tag">FastAPI</span>
+                        <span class="tech-tag">TF-IDF</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/debarghamondal01-lab/fake-job-detector-api" target="_blank" class="project-link">
+                            📁 View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">📊</div>
+                        <div>
+                            <h3 class="project-title">Fake Job Detector CLI</h3>
+                            <p class="project-category">NLP · Machine Learning</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        The command-line version of the Fake Job Detector. Includes data preprocessing, model training, class balancing, and local inference.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">Pandas</span>
+                        <span class="tech-tag">Scikit-learn</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/debarghamondal01-lab/fake-job-detector" target="_blank" class="project-link">
+                            📁 View Code
+                        </a>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <div class="project-icon">📚</div>
+                        <div>
+                            <h3 class="project-title">Library Manager</h3>
+                            <p class="project-category">Python · CLI · Data</p>
+                        </div>
+                    </div>
+                    <p class="project-description">
+                        A lightweight command-line application to manage a personal book collection. Full CRUD with JSON-based persistent storage.
+                    </p>
+                    <div class="project-tech">
+                        <span class="tech-tag">Python</span>
+                        <span class="tech-tag">JSON</span>
+                        <span class="tech-tag">CRUD</span>
+                    </div>
+                    <div class="project-links">
+                        <a href="https://github.com/debarghamondal01-lab/library-manager" target="_blank" class="project-link">
+                            📁 View Code
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ SKILLS SECTION ============ -->
+    <section id="skills" class="section">
+        <div class="container">
+            <h2 class="section-title">Skills & Tools</h2>
+            <p class="section-subtitle">The technologies I use to build intelligent systems.</p>
+
+            <div class="skills-grid">
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">💻 Programming</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Python</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 90%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>C</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>SQL</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 65%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">🧠 Machine Learning</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>TensorFlow / Keras</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>Scikit-learn</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>NumPy / Pandas</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category">
+                    <h3 class="skill-cat-title">🌐 Web & APIs</h3>
+                    <div class="skill-list">
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>FastAPI / REST</span>
+                                <span class="skill-level">Advanced</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 85%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>HTML / CSS</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 75%"></div></div>
+                        </div>
+                        <div class="skill-item">
+                            <div class="skill-header">
+                                <span>JavaScript</span>
+                                <span class="skill-level">Intermediate</span>
+                            </div>
+                            <div class="skill-bar"><div class="skill-fill" style="width: 70%"></div></div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="skill-category full-width">
+                    <h3 class="skill-cat-title">🛠️ Tools & Concepts</h3>
+                    <div class="skill-tags">
+                        <span class="skill-tag">Git</span>
+                        <span class="skill-tag">GitHub</span>
+                        <span class="skill-tag">Google Colab</span>
+                        <span class="skill-tag">VS Code</span>
+                        <span class="skill-tag">Jupyter</span>
+                        <span class="skill-tag">Prompt Engineering</span>
+                        <span class="skill-tag">CSP Algorithms</span>
+                        <span class="skill-tag">Data Structures</span>
+                        <span class="skill-tag">OOP</span>
+                        <span class="skill-tag">DBMS</span>
+                        <span class="skill-tag">Backtracking</span>
+                        <span class="skill-tag">AC-3</span>
+                        <span class="skill-tag">REST APIs</span>
+                        <span class="skill-tag">Model Deployment</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ CONTACT SECTION ============ -->
+    <section id="contact" class="section">
+        <div class="container">
+            <h2 class="section-title">Let's Connect</h2>
+            <p class="section-subtitle">I'm actively looking for internships and collaborations.</p>
+
+            <div class="contact-grid">
+                <a href="mailto:debarghamondal01@gmail.com" class="contact-card">
+                    <div class="contact-icon">✉️</div>
+                    <div class="contact-label">Email</div>
+                    <div class="contact-value">debarghamondal01@gmail.com</div>
+                </a>
+
+                <a href="https://github.com/debarghamondal01-lab" target="_blank" class="contact-card">
+                    <div class="contact-icon">💻</div>
+                    <div class="contact-label">GitHub</div>
+                    <div class="contact-value">@debarghamondal01-lab</div>
+                </a>
+
+                <a href="https://www.linkedin.com/in/debargha-mondal-226851436/" target="_blank" class="contact-card">
+                    <div class="contact-icon">🔗</div>
+                    <div class="contact-label">LinkedIn</div>
+                    <div class="contact-value">debargha-mondal</div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ THANK YOU SECTION ============ -->
+    <section id="thanks" class="thanks-section">
+        <div class="thanks-container">
+            <div class="thanks-emojis">
+                <span class="floating-emoji" style="--delay: 0s;">🎉</span>
+                <span class="floating-emoji" style="--delay: 0.4s;">🚀</span>
+                <span class="floating-emoji" style="--delay: 0.8s;">✨</span>
+                <span class="floating-emoji" style="--delay: 1.2s;">💡</span>
+                <span class="floating-emoji" style="--delay: 1.6s;">🎯</span>
+            </div>
+
+            <h2 class="thanks-title">Thank You for Visiting</h2>
+
+            <p class="thanks-message">
+                Thanks for scrolling all the way down! If you liked what you saw, 
+                feel free to reach out. I'm always open to collaborations, 
+                opportunities, or just a friendly chat about AI and code.
+            </p>
+
+            <div class="thanks-actions">
+                <a href="#contact" class="btn primary">📩 Get In Touch</a>
+                <a href="#home" class="btn secondary">⬆️ Back to Top</a>
+            </div>
+
+            <div class="thanks-signature">
+                <p>Crafted with <span class="heart">❤️</span> by <strong>Debargha Mondal</strong></p>
+                <p class="thanks-year">© 2026 · All rights reserved</p>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
