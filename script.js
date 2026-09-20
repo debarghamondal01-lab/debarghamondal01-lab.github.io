@@ -53,42 +53,47 @@ document.querySelectorAll('a[href^="#"]').forEach(link => {
 // ===== Scroll Reveal =====
 const revealElements = document.querySelectorAll('.project-card, .skill-category, .fact-card, .contact-card');
 
-// Set initial hidden state with stagger delay
+// Step 1: Set initial hidden state
 revealElements.forEach((el) => {
     el.style.opacity = '0';
     el.style.transform = 'translateY(40px) scale(0.96)';
     el.style.transition = 'opacity 0.7s cubic-bezier(0.4, 0, 0.2, 1), transform 0.7s cubic-bezier(0.4, 0, 0.2, 1)';
+
     const parent = el.parentElement;
     const index = Array.prototype.indexOf.call(parent.children, el);
     el.style.transitionDelay = `${index * 0.08}s`;
 });
 
-const revealObserver = new IntersectionObserver((entries) => {
-    entries.forEach((entry) => {
-        if (entry.isIntersecting) {
-            entry.target.style.opacity = '1';
-            entry.target.style.transform = 'translateY(0) scale(1)';
-            revealObserver.unobserve(entry.target);
+// Step 2: Wait for two animation frames, THEN set up the observer
+requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+        const revealObserver = new IntersectionObserver((entries) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0) scale(1)';
+                    revealObserver.unobserve(entry.target);
 
-            // Wait for reveal + stagger + buffer, THEN switch to fast transition for tilt
-            setTimeout(() => {
-                entry.target.style.transition =
-                    'transform 0.15s ease-out, ' +
-                    'box-shadow 0.3s ease, ' +
-                    'border-color 0.3s ease, ' +
-                    'background 0.3s ease, ' +
-                    'opacity 0.3s ease';
-                entry.target.style.transitionDelay = '0s';
-            }, 1500);
-        }
+                    // After reveal, switch to fast transition for tilt
+                    setTimeout(() => {
+                        entry.target.style.transition =
+                            'transform 0.15s ease-out, ' +
+                            'box-shadow 0.3s ease, ' +
+                            'border-color 0.3s ease, ' +
+                            'background 0.3s ease, ' +
+                            'opacity 0.3s ease';
+                        entry.target.style.transitionDelay = '0s';
+                    }, 1500);
+                }
+            });
+        }, {
+            threshold: 0.12,
+            rootMargin: '0px 0px -60px 0px'
+        });
+
+        revealElements.forEach(el => revealObserver.observe(el));
     });
-}, {
-    threshold: 0.12,
-    rootMargin: '0px 0px -60px 0px'
 });
-
-revealElements.forEach(el => revealObserver.observe(el));
-
 // ===== Animated Number Counters =====
 const counters = document.querySelectorAll('.stat-number');
 const counterObserver = new IntersectionObserver((entries) => {
