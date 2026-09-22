@@ -195,3 +195,23 @@ if (document.readyState === 'loading') {
     setTimeout(initTextAnimations, 500);
 }
 console.log('✅ Effects loaded — cursor trail + click burst + text animations');
+// ===== Scroll Progress Bar =====
+(function () {
+    const bar = document.createElement('div');
+    bar.className = 'scroll-progress';
+    bar.id = 'scrollProgress';
+    document.body.appendChild(bar);
+
+    function updateProgress() {
+        const scrollTop = window.scrollY || document.documentElement.scrollTop;
+        const scrollHeight = document.documentElement.scrollHeight - window.innerHeight;
+        const progress = scrollHeight > 0 ? (scrollTop / scrollHeight) * 100 : 0;
+        bar.style.width = progress + '%';
+    }
+
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress);
+    updateProgress();
+
+    console.log('📊 Scroll progress bar ready');
+})();
